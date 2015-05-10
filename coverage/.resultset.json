@@ -1,0 +1,30 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/donaldlee/Developer/cloudreach/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/donaldlee/Developer/cloudreach/app/helpers/contacts_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/donaldlee/Developer/cloudreach/app/helpers/questions_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/donaldlee/Developer/cloudreach/app/controllers/contacts_controller.rb": [
+        1,
+        null
+      ],
+      "/Users/donaldlee/Developer/cloudreach/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1431298349
+  }
+}
