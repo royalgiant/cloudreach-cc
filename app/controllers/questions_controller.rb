@@ -25,6 +25,10 @@ class QuestionsController < ApplicationController
 	# E.g. { abc: ‘hello’, ‘another_key’ => 123, 4567 => ‘third’ } 
 	# Returns  [“abc”, “4567”, “another_key”]
 	def two
+		hash = { abc: "hello", "another_key" => 123, 4567 => "third" } 
+		array = hash.keys.map(&:to_s).sort_by(&:length)
+		raise array.inspect
+		render nothing: true
 	end
 
 end
