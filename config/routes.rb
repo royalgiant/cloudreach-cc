@@ -33,6 +33,8 @@ Rails.application.routes.draw do
     }
   end
 
+  resources :contacts
+
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
