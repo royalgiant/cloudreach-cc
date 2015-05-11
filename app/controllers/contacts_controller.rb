@@ -54,6 +54,7 @@ class ContactsController < ApplicationController
 		rescue Exception => e
 			flash[:danger] = "Invalid Email Address"
 		end 
+		flash[:sucess] = "Email succesfully added!"
 		@contacts = Contact.paginate(page: params[:page], per_page: 10)
 		render :index
 	end
@@ -64,6 +65,7 @@ class ContactsController < ApplicationController
 		rescue Exception => e
 			flash[:danger] = "Invalid Telephone Number"
 		end 
+		flash[:sucess] = "Telephone number succesfully added!"
 		@contacts = Contact.paginate(page: params[:page], per_page: 10)
 		render :index
 	end
