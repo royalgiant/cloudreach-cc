@@ -1,6 +1,8 @@
 <%= provide(:title, "Contact List") %>
 <div class="col-md-9 col-md-offset-2 main fromHeader">
-
+	<div>
+		<button class="btn btn-default" type="submit"><%= link_to( "Add a New Contact",new_contact_path)%></button>
+	</div>
 	<% if !@contacts.empty? %>
 		<h2>List of all Contacts</h2>
 		<div>

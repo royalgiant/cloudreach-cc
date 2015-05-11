@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20150510233137) do
 
   create_table "email_addresses", force: :cascade do |t|
     t.string   "email_address", null: false
-    t.string   "type",          null: false
+    t.string   "email_type",    null: false
     t.integer  "contact_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20150510233137) do
 
   create_table "telephone_numbers", force: :cascade do |t|
     t.string   "telephone_number", null: false
-    t.string   "type",             null: false
+    t.string   "telephone_type",   null: false
     t.integer  "contact_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
