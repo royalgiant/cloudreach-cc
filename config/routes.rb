@@ -30,6 +30,7 @@ Rails.application.routes.draw do
     collection { 
       get :one
       get :two
+      post :two
     }
   end
   

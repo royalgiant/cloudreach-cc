@@ -1,0 +1,18 @@
+<div class="col-md-9 col-md-offset-2 main">
+	
+
+
+	<%= form_tag '/questions/two' do %>
+	    <%=label_tag 'Hash' %>
+	    <%=text_field_tag 'Hash'%>
+	   	<p><i>* Make sure format is something like { abc: "hello", "another_key" => 123, 4567 => "third" }</i></p>
+	    <div><%= submit_tag 'Submit' %></div>
+	<% end %>
+
+	<%if @array %>
+		<div>
+			<p>Result from previous Hash:</p>
+			<p><%= @array %></p>
+		</div>
+	<% end %>
+</div>
