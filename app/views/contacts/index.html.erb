@@ -27,21 +27,41 @@
 					<div class="col-xs-4">
 						<div><b><u>Telephone Numbers:</u></b></div>
 						<% contact.telephone_numbers.each do |t|%>
-							<span><%= t.telephone_type%>: </span><span><%= t.telephone_number%></span>
+							<div><span><%= t.telephone_type%>: </span><span><%= t.telephone_number%></span></div>
 						<% end %>
 					</div>
 
 					<div class="col-xs-4">
 						<div><b><u>Email Addresses:</u></b></div>
 						<% contact.email_addresses.each do |t|%>
-							<span><%= t.email_type%>: </span><span><%= t.email_address%></span>
+							<div><span><%= t.email_type%>: </span><span><%= t.email_address%></span></div>
 						<% end %>
 					</div>
 				</div>
+
+				<div class="addEmail row moreDetails">
+					<%= form_for :email_address, url: contacts_add_email_path do |f| %>
+						<div class="col-xs-3"><%= f.text_field :email_address, placeholder: "Email Address", :class => "form-control"%></div>
+						<div class="col-xs-3"><%= f.select(:email_type, options_for_select([['Home', 'Home'], ['Work', 'Work'], ['Cell', 'Cell'], ['Other', 'Other'] ], 2), {}, {:class=>"form-control"}) %></div>
+						<div><%= f.hidden_field :contact_id, value: contact.id %></div>
+						<%= f.submit "Add Email", :class => "btn btn-large btn-primary" %>
+					<% end %>
+					<button class="btn btn-danger cancelEmailButton">Cancel</button>
+				</div>
+
+				<div class="addTelephone row moreDetails">		
+					<%= form_for :telephone_number, url: contacts_add_telephone_path do |f| %>
+						<div class="col-xs-3"><%= f.text_field :telephone_number, placeholder: "Telephone Number", :class => "form-control"%></div>
+						<div class="col-xs-3"><%= f.select(:telephone_type, options_for_select([['Home', 'Home'], ['Work', 'Work'], ['Cell', 'Cell'], ['Other', 'Other'] ], 2), {}, {:class=>"form-control"}) %></div>
+						<div><%= f.hidden_field :contact_id, value: contact.id %></div>
+						<%= f.submit "Add Telephone", :class => "btn btn-large btn-primary" %>
+					<% end %>
+					<button class="btn btn-danger cancelTelephoneButton">Cancel</button>
+				</div>
+
 				<div class="moreDetails">
-					<button class="btn btn-default"><%= link_to( "Add Another Email" ,root_path)%></button>
-					<button class="btn btn-default"><%= link_to( "Add Another Telephone Number" ,root_path)%></button>
-					<button class="btn btn-default" type="submit"><%= link_to( "More details",contact_path(contact))%></button>
+					<button class="btn btn-default emailButton">Add Another Email</button>
+					<button class="btn btn-default telephoneButton">Add Another Telephone Number</button>
 				</div>
 				<hr>
 			<% end %>

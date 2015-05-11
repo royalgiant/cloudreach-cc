@@ -34,9 +34,9 @@ Rails.application.routes.draw do
   end
   
   resources :contacts
-  
+  post "contacts/add_email" => "contacts#add_email", :to => "contacts_add_email"
+  post "contacts/add_telephone" => "contacts#add_telephone", :to => "contacts_add_telephone"
 
-  
   root "contacts#index"
 
   # Example resource route with sub-resources:

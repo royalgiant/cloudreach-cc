@@ -48,12 +48,40 @@ class ContactsController < ApplicationController
 		end
 	end
 
+	def add_email
+		begin
+			EmailAddress.find_or_create_by!(email_params)
+		rescue Exception => e
+			flash[:danger] = "Invalid Email Address"
+		end 
+		@contacts = Contact.paginate(page: params[:page])
+		render :index
+	end
+
+	def add_telephone
+		begin
+			TelephoneNumber.find_or_create_by!(telephone_params)
+		rescue Exception => e
+			flash[:danger] = "Invalid Telephone Number"
+		end 
+		@contacts = Contact.paginate(page: params[:page])
+		render :index
+	end
+
 	private
 
 	def contact_params
 		params.require(:contact).permit(:first_name, :last_name, :address1, :address2, :city, :postal_code, 
 			{typ_countries: :id}, {typ_regions: :id}, email_addresses_attributes: [:email_address, :email_type],
 			telephone_numbers_attributes: [:telephone_number, :telephone_type])
+	end
+
+	def email_params
+		params.require(:email_address).permit(:email_address, :email_type, :contact_id)
+	end
+
+	def telephone_params
+		params.require(:telephone_number).permit(:telephone_number, :telephone_type, :contact_id)
 	end
 
 	def create_failed(contact_info, e, telephone, email)

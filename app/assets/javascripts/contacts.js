@@ -16,5 +16,28 @@ $(document).ready(
 		        return $('#contact_typ_regions_id').hide(options);
 		    }
 		});
+
+	    // Let's hide these two forms when the page loads
+	    $(".addTelephone").hide()
+	    $(".addEmail").hide()
+	    // If the Add Another Email button is clicked, show the add email form
+	    $(".emailButton").click(function(){
+	    	$(".addEmail").show()
+	    	$(".emailButton, .telephoneButton").hide()
+	    })
+	    	
+	    // If the Add Another Telephone Number button is clicked, show the add telephone number form
+	    $(".telephoneButton").click(function(){
+	    	$(".addTelephone").show()
+	    	$(".emailButton, .telephoneButton").hide()
+	    })
+	    
+	    // If any cancel button is clicked, we'll just hide everything
+	    $(".cancelTelephoneButton, .cancelEmailButton").click(function(){
+	    	$(".addTelephone").hide()
+	    	$(".addEmail").hide()
+	    	$(".emailButton, .telephoneButton").show()
+	    });
+
 	}
 );

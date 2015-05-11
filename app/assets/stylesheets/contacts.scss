@@ -13,3 +13,9 @@ a:hover{
 .moreDetails{
 	margin-top:10px;
 }
+
+.addTelephone, .addEmail{
+	form {
+		display:inline !important;
+	}
+}
