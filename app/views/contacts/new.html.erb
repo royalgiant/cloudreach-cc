@@ -1,0 +1,35 @@
+<title><%= provide(:title, "Create") %></title>
+<div class="col-md-6 col-md-offset-3 main fromHeader">
+	<h2><center>Create a New Contact</center></h2>
+	<%= form_for @contact do |f| %>
+
+		<%= f.text_field :first_name, placeholder: "First Name", :class => "form-control" %>
+		<%= f.text_field :last_name, placeholder: "Last Name", :class => "form-control" %>
+		<%= f.text_field :address1, placeholder: "Address 1", :class => "form-control" %>
+		<%= f.text_field :address2, placeholder: "Address 2", :class => "form-control" %>
+		<%= f.text_field :city, placeholder: "City", :class => "form-control" %>
+		<%= f.text_field :postal_code, placeholder: "Postal Code", :class => "form-control" %>
+
+		<%= f.fields_for :typ_countries do |country|%>
+			<%= country.collection_select :id, TypCountry.order(:country),:id,:country, {prompt: "Please Select Country", selected: 124 }, {:class => "form-control"} %>
+   		<% end %>
+		<%= f.fields_for :typ_regions do |region| %>
+			<%= region.grouped_collection_select :id, TypCountry.order(:country),:typ_region, :country, :id, :name, {prompt: "Please Select Region", selected: 527 }, {:class => "form-control"}%>
+    	<% end %>
+    	<div class="row">
+	    	<%= f.fields_for :email_addresses do |email_form|%>
+				<div class="col-xs-6"><%= email_form.text_field :email_address, placeholder: "Email Address", :class => "form-control"%></div>
+				<div class="col-xs-6"><%= select_tag(:type, options_for_select([['Home', 1], ['Work', 2], ['Cell', 3], ['Other', 4] ], 2), {:class=>"form-control"}) %></div>
+			<% end %> 
+    	</div>
+    	
+    	<div class="row">
+    		<%= f.fields_for :telephone_numbers do |telephone_form|%>
+				<div class="col-xs-6"><%= telephone_form.text_field :telephone_number, placeholder: "Telephone number", :class => "form-control"%></div>
+				<div class="col-xs-6"><%= select_tag(:type, options_for_select([['Home', 1], ['Work', 2], ['Cell', 3], ['Other', 4] ], 2), {:class=>"form-control"}) %></div>
+			<% end %> 
+    	</div>
+		
+		<%= f.submit "Create Contact", :class => "btn btn-large btn-primary" %>
+	<% end %>
+</div>

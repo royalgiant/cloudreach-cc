@@ -3,6 +3,15 @@
     "coverage": {
       "/Users/donaldlee/Developer/cloudreach/app/helpers/application_helper.rb": [
         1,
+        null,
+        1,
+        2,
+        2,
+        0,
+        null,
+        2,
+        null,
+        null,
         null
       ],
       "/Users/donaldlee/Developer/cloudreach/app/helpers/contacts_helper.rb": [
@@ -17,11 +26,13 @@
         1,
         null,
         1,
+        1,
         null,
         null,
         1,
         null,
         null,
+        1,
         1,
         null,
         null,
@@ -39,17 +50,50 @@
       ],
       "/Users/donaldlee/Developer/cloudreach/app/models/contact.rb": [
         1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/donaldlee/Developer/cloudreach/app/models/email_address.rb": [
         1,
+        null,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/donaldlee/Developer/cloudreach/app/models/telephone_number.rb": [
         1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/donaldlee/Developer/cloudreach/app/models/typ_country.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/donaldlee/Developer/cloudreach/app/models/typ_region.rb": [
+        1,
+        1,
+        1,
         null
       ]
     },
-    "timestamp": 1431303055
+    "timestamp": 1431314297
   }
 }

@@ -4,11 +4,11 @@ RSpec.feature "Contacts", :type => :feature do
   	subject { page }
 
   	scenario "Index - Gives a list of contacts" do
-  		visit "contacts/index"
+  		visit "contacts"
   		expect(page).to have_title('Contact List')
     	expect(page).to have_content('List of all Contacts')
 
-    	expect(page).to have_selector('li')
+    	expect(page).to have_selector('h2')
   	end
 
 

@@ -28,16 +28,16 @@ ActiveRecord::Schema.define(version: 20150510233137) do
   end
 
   create_table "email_addresses", force: :cascade do |t|
-    t.string   "email_address"
-    t.string   "type"
+    t.string   "email_address", null: false
+    t.string   "type",          null: false
     t.integer  "contact_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end
 
   create_table "telephone_numbers", force: :cascade do |t|
-    t.string   "telephone_number"
-    t.string   "type"
+    t.string   "telephone_number", null: false
+    t.string   "type",             null: false
     t.integer  "contact_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false

@@ -11,7 +11,7 @@ class CreateContacts < ActiveRecord::Migration
     	t.string :avatar
     	t.belongs_to :typ_country
     	t.belongs_to :typ_region
-      	t.timestamps null: false
+      t.timestamps null: false
     end
   end
 end

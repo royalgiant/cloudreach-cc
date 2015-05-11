@@ -1,0 +1,24 @@
+<%= provide(:title, "Contact List") %>
+<div class="col-md-9 col-md-offset-2 main fromHeader">
+
+	<% if !@contacts.empty? %>
+		<h2>List of all Contacts</h2>
+		<div>
+			<%= will_paginate @contacts, renderer: BootstrapPagination::Rails%>
+			<% @contacts.each do |contact| %>
+				<div>
+					<p>First Name: </p><span><%= %></span>
+					<p>Last Name: </p><span><%= %></span>
+					<p>Address 1: </p><span><%= %></span>
+					<p>Address 2: </p><span><%= %></span>
+					<p>City: </p><span><%= %></span>
+					<p>Postal Code: </p><span><%= %></span>
+					<p>Region: </p><span><%= %></span>
+					<p>Country: </p><span><%= %></span>
+				</div>
+			<% end %>
+		</div>
+	<% else %>
+		<h2>There are no contacts</h2>
+	<% end %>
+</div>

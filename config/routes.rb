@@ -32,8 +32,10 @@ Rails.application.routes.draw do
       get :two
     }
   end
-
+  
   resources :contacts
+  
+  root "contacts#index"
 
   # Example resource route with sub-resources:
   #   resources :products do
