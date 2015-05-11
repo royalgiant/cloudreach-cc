@@ -23,6 +23,7 @@ group :development, :test do
 	gem 'guard-rspec'
 	gem 'spork-rails'
 	gem 'guard-spork'
+	gem 'shoulda-matchers'
 end
 
 group :test do
@@ -34,6 +35,7 @@ group :test do
 end
 
 gem 'sqlite3'
+gem 'shoulda'
 gem 'bootstrap-sass', '3.2.0.0'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
