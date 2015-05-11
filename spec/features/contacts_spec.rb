@@ -27,14 +27,14 @@ RSpec.feature "Contacts", :type => :feature do
 	    fill_in "Last Name", 		:with => "Lee"
 	    fill_in "Address 1", 		:with => "1234 Fake Street"
 	    fill_in "Address 2", 		:with => "Unit 95B"
-	    fill_in "City",				:with => "Toronto"
-	    # find_field("contact_typ_countries_id").find("option[value='124']").click
-	    # select('Alaska', :from => 'contact_typ_regions_id')
+	    fill_in "City",				:with => "Vancouver"
 	    fill_in "Postal Code",		:with => "T4M 5R4"
-	    fill_in "Email Address",			:with => "donald@lee.com"
-	    fill_in "Email Type",		:with => "Work"
-	    fill_in "Telephone Number", :with => "(519)-234-1047"
-	    fill_in "Telephone Type",	:with => "Work"
+	    select('Canada', :from => 'contact_typ_countries_id')
+	    select('British Columbia', :from => 'contact_typ_regions_id')
+	    fill_in "Email Address",	:with => "donald@lee.com"
+	    select('Work', :from => 'contact_email_addresses_attributes_0_email_type')
+	    fill_in "Telephone number", :with => "5192341047"
+	    select('Work', :from => 'contact_telephone_numbers_attributes_0_telephone_type')
 	    click_button "Create Contact"
 	
 	    expect(page).to have_text("Contact created successfully!")
