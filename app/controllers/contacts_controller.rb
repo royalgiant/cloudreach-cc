@@ -1,7 +1,7 @@
 class ContactsController < ApplicationController
 
 	def index
-		@contacts = Contact.paginate(page: params[:page])
+		@contacts = Contact.paginate(page: params[:page], per_page: 10)
 	end
 
 	def new
@@ -38,7 +38,7 @@ class ContactsController < ApplicationController
 				if @contact = Contact.create!(contact_info) && TelephoneNumber.create!(telephone) && EmailAddress.create!(email)
 					TelephoneNumber.update(@contact.id, contact_id: @contact.id)			
 					EmailAddress.update(@contact.id, contact_id: @contact.id)	
-					@contacts = Contact.paginate(page: params[:page])
+					@contacts = Contact.paginate(page: params[:page], per_page: 10)
 					flash[:success] = "Contact created successfully!"
 					render :index	
 				end
@@ -54,7 +54,7 @@ class ContactsController < ApplicationController
 		rescue Exception => e
 			flash[:danger] = "Invalid Email Address"
 		end 
-		@contacts = Contact.paginate(page: params[:page])
+		@contacts = Contact.paginate(page: params[:page], per_page: 10)
 		render :index
 	end
 
@@ -64,7 +64,7 @@ class ContactsController < ApplicationController
 		rescue Exception => e
 			flash[:danger] = "Invalid Telephone Number"
 		end 
-		@contacts = Contact.paginate(page: params[:page])
+		@contacts = Contact.paginate(page: params[:page], per_page: 10)
 		render :index
 	end
 
