@@ -25,7 +25,7 @@
     	
     	<div class="row">
     		<%= f.fields_for :telephone_numbers do |telephone_form|%>
-				<div class="col-xs-6"><%= telephone_form.text_field :telephone_number, placeholder: "Telephone number", :class => "form-control"%></div>
+				<div class="col-xs-6"><%= telephone_form.text_field :telephone_number, placeholder: "Telephone number (i.e. 2341234356)", :class => "form-control"%></div>
 				<div class="col-xs-6"><%= telephone_form.select(:telephone_type, options_for_select([['Home', 'Home'], ['Work', 'Work'], ['Cell', 'Cell'], ['Other', 'Other'] ], 2), {},{:class=>"form-control"}) %></div>
 			<% end %> 
     	</div>

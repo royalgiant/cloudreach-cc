@@ -88,7 +88,7 @@ class ContactsController < ApplicationController
 
 	def create_failed(contact_info, e, telephone, email)
 		if !e.blank?
-			flash[:danger] = "All fields must be filled in!"
+			flash[:danger] = "All fields must be filled in correctly!"
 		else
 			flash[:warning] = "This contact already exists!"
 		end
