@@ -16,6 +16,6 @@ To get this project up and running please do the following:
 
 * I've added a sample_contacts.rake file for creating arbitrary data in the database. Run rake db:populate to populate the database. Append RAILS_ENV=test to populate the test database
 
-Fun project, stay up till 3:30am working on it.
+Fun project (no sarcasm). 
 
 <tt>rake doc:app</tt>.
