@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-05-11T02:58:19-07:00">2015-05-11T02:58:19-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-05-11T03:01:13-07:00">2015-05-11T03:01:13-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">59.55%</span></span>
+    (<span class="covered_percent"><span class="red">58.24%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.66
+         0.65
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>10</b> files in total.
-    <b>89</b> relevant lines. 
+    <b>91</b> relevant lines. 
     <span class="green"><b>53</b> lines covered</span> and
-    <span class="red"><b>36</b> lines missed </span>
+    <span class="red"><b>38</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,11 +62,11 @@
       
       <tr>
         <td class="strong"><a href="#8a24768e78ad7ec38e397de5ed5657bb09b9f0c4" class="src_link" title="app/controllers/contacts_controller.rb">app/controllers/contacts_controller.rb</a></td>
-        <td class="red strong">30.0 %</td>
-        <td>99</td>
-        <td>50</td>
+        <td class="red strong">28.85 %</td>
+        <td>101</td>
+        <td>52</td>
         <td>15</td>
-        <td>35</td>
+        <td>37</td>
         <td>0.3</td>
       </tr>
       
@@ -159,7 +159,7 @@
           <div class="file_list_container" id="Controllers">
   <h2>
     <span class="group_name">Controllers</span>
-    (<span class="covered_percent"><span class="red">32.69%</span></span>
+    (<span class="covered_percent"><span class="red">31.48%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
@@ -170,9 +170,9 @@
   <a name="Controllers"></a>
   <div>
     <b>2</b> files in total.
-    <b>52</b> relevant lines. 
+    <b>54</b> relevant lines. 
     <span class="green"><b>17</b> lines covered</span> and
-    <span class="red"><b>35</b> lines missed </span>
+    <span class="red"><b>37</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -200,11 +200,11 @@
       
       <tr>
         <td class="strong"><a href="#8a24768e78ad7ec38e397de5ed5657bb09b9f0c4" class="src_link" title="app/controllers/contacts_controller.rb">app/controllers/contacts_controller.rb</a></td>
-        <td class="red strong">30.0 %</td>
-        <td>99</td>
-        <td>50</td>
+        <td class="red strong">28.85 %</td>
+        <td>101</td>
+        <td>52</td>
         <td>15</td>
-        <td>35</td>
+        <td>37</td>
         <td>0.3</td>
       </tr>
       
@@ -502,11 +502,11 @@
         <div class="source_table" id="8a24768e78ad7ec38e397de5ed5657bb09b9f0c4">
   <div class="header">
     <h3>app/controllers/contacts_controller.rb</h3>
-    <h4><span class="red">30.0 %</span> covered</h4>
+    <h4><span class="red">28.85 %</span> covered</h4>
     <div>
-      <b>50</b> relevant lines. 
+      <b>52</b> relevant lines. 
       <span class="green"><b>15</b> lines covered</span> and
-      <span class="red"><b>35</b> lines missed.</span>
+      <span class="red"><b>37</b> lines missed.</span>
     </div>
   </div>
   
@@ -852,91 +852,91 @@
         <li class="missed" data-hits="0" data-linenumber="57">
           
           
-          <code class="ruby">		@contacts = Contact.paginate(page: params[:page], per_page: 10)</code>
+          <code class="ruby">		flash[:sucess] = &quot;Email succesfully added!&quot;</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="58">
           
           
-          <code class="ruby">		render :index</code>
+          <code class="ruby">		@contacts = Contact.paginate(page: params[:page], per_page: 10)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="59">
+        <li class="missed" data-hits="0" data-linenumber="59">
           
           
-          <code class="ruby">	end</code>
+          <code class="ruby">		render :index</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="60">
           
           
+          <code class="ruby">	end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="61">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="61">
+        <li class="covered" data-hits="1" data-linenumber="62">
           <span class="hits">1</span>
           
           <code class="ruby">	def add_telephone</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="62">
+        <li class="missed" data-hits="0" data-linenumber="63">
           
           
           <code class="ruby">		begin</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="63">
+        <li class="missed" data-hits="0" data-linenumber="64">
           
           
           <code class="ruby">			TelephoneNumber.find_or_create_by!(telephone_params)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="64">
+        <li class="never" data-hits="" data-linenumber="65">
           
           
           <code class="ruby">		rescue Exception =&gt; e</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="65">
+        <li class="missed" data-hits="0" data-linenumber="66">
           
           
           <code class="ruby">			flash[:danger] = &quot;Invalid Telephone Number&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="66">
+        <li class="never" data-hits="" data-linenumber="67">
           
           
           <code class="ruby">		end </code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="67">
+        <li class="missed" data-hits="0" data-linenumber="68">
+          
+          
+          <code class="ruby">		flash[:sucess] = &quot;Telephone number succesfully added!&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="69">
           
           
           <code class="ruby">		@contacts = Contact.paginate(page: params[:page], per_page: 10)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="68">
+        <li class="missed" data-hits="0" data-linenumber="70">
           
           
           <code class="ruby">		render :index</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="69">
+        <li class="never" data-hits="" data-linenumber="71">
           
           
           <code class="ruby">	end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="70">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="71">
-          <span class="hits">1</span>
-          
-          <code class="ruby">	private</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="72">
@@ -948,160 +948,172 @@
         <li class="covered" data-hits="1" data-linenumber="73">
           <span class="hits">1</span>
           
+          <code class="ruby">	private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="74">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="75">
+          <span class="hits">1</span>
+          
           <code class="ruby">	def contact_params</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="74">
+        <li class="missed" data-hits="0" data-linenumber="76">
           
           
           <code class="ruby">		params.require(:contact).permit(:first_name, :last_name, :address1, :address2, :city, :postal_code, </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="75">
+        <li class="never" data-hits="" data-linenumber="77">
           
           
           <code class="ruby">			{typ_countries: :id}, {typ_regions: :id}, email_addresses_attributes: [:email_address, :email_type],</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="76">
+        <li class="never" data-hits="" data-linenumber="78">
           
           
           <code class="ruby">			telephone_numbers_attributes: [:telephone_number, :telephone_type])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="77">
+        <li class="never" data-hits="" data-linenumber="79">
           
           
           <code class="ruby">	end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="78">
+        <li class="never" data-hits="" data-linenumber="80">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="79">
+        <li class="covered" data-hits="1" data-linenumber="81">
           <span class="hits">1</span>
           
           <code class="ruby">	def email_params</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="80">
+        <li class="missed" data-hits="0" data-linenumber="82">
           
           
           <code class="ruby">		params.require(:email_address).permit(:email_address, :email_type, :contact_id)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="81">
+        <li class="never" data-hits="" data-linenumber="83">
           
           
           <code class="ruby">	end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="82">
+        <li class="never" data-hits="" data-linenumber="84">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="83">
+        <li class="covered" data-hits="1" data-linenumber="85">
           <span class="hits">1</span>
           
           <code class="ruby">	def telephone_params</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="84">
+        <li class="missed" data-hits="0" data-linenumber="86">
           
           
           <code class="ruby">		params.require(:telephone_number).permit(:telephone_number, :telephone_type, :contact_id)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="85">
+        <li class="never" data-hits="" data-linenumber="87">
           
           
           <code class="ruby">	end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="86">
+        <li class="never" data-hits="" data-linenumber="88">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="87">
+        <li class="covered" data-hits="1" data-linenumber="89">
           <span class="hits">1</span>
           
           <code class="ruby">	def create_failed(contact_info, e, telephone, email)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="88">
+        <li class="missed" data-hits="0" data-linenumber="90">
           
           
           <code class="ruby">		if !e.blank?</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="89">
+        <li class="missed" data-hits="0" data-linenumber="91">
           
           
           <code class="ruby">			flash[:danger] = &quot;All fields must be filled in!&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="90">
+        <li class="never" data-hits="" data-linenumber="92">
           
           
           <code class="ruby">		else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="91">
+        <li class="missed" data-hits="0" data-linenumber="93">
           
           
           <code class="ruby">			flash[:warning] = &quot;This contact already exists!&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="92">
+        <li class="never" data-hits="" data-linenumber="94">
           
           
           <code class="ruby">		end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="93">
+        <li class="missed" data-hits="0" data-linenumber="95">
           
           
           <code class="ruby">		@contact = Contact.new(contact_info)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="94">
+        <li class="missed" data-hits="0" data-linenumber="96">
           
           
           <code class="ruby">		@contact.email_addresses.build(email) </code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="95">
+        <li class="missed" data-hits="0" data-linenumber="97">
           
           
           <code class="ruby">		@contact.telephone_numbers.build(telephone) </code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="96">
+        <li class="missed" data-hits="0" data-linenumber="98">
           
           
           <code class="ruby">		render :new</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="97">
+        <li class="never" data-hits="" data-linenumber="99">
           
           
           <code class="ruby">	end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="98">
+        <li class="never" data-hits="" data-linenumber="100">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="99">
+        <li class="never" data-hits="" data-linenumber="101">
           
           
           <code class="ruby">end</code>
