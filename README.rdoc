@@ -1,28 +1,21 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To get this project up and running please do the following:
 
-Things you may want to cover:
+* Question 1: the route for this is questions#one, navigate there to see answer
 
-* Ruby version
+* Question: the route for this is questions#two, navigate there to see answer
 
-* System dependencies
+* Question 3 stuff below:
 
-* Configuration
+* To run in dev: rake db:create && rake db:migrate && rails s
 
-* Database creation
+* To run in test: rake db:create RAILS_ENV=test && rake db:migrate RAILS_ENV=test && rspec (whenever you want to run the tests)
 
-* Database initialization
+* All of the tests are in spec/models and spec/features
 
-* How to run the test suite
+* I've added a sample_contacts.rake file for creating arbitrary data in the database. Run rake db:populate to populate the database. Append RAILS_ENV=test to populate the test database
 
-* Services (job queues, cache servers, search engines, etc.)
+Fun project, stay up till 3:30am working on it.
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
