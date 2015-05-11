@@ -31,9 +31,4 @@ RSpec.feature "Contacts", :type => :feature do
 
 	    expect(page).to have_text("Contact was successfully created.")
 	end
-
-	scenario "Show - Show the contact" do
-		visit "/contacts/show/1" #Make sure DB is populated or the test fails.
-		response.should render_template :show
-	end
 end

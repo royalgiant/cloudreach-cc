@@ -3,6 +3,7 @@
 	<div>
 		<button class="btn btn-default" type="submit"><%= link_to( "Add a New Contact",new_contact_path)%></button>
 	</div>
+	<!-- Check if contact's was empty -->
 	<% if !@contacts.empty? %>
 		<h2>List of all Contacts</h2>
 		<hr>
@@ -11,6 +12,7 @@
 			<% @contacts.each do |contact| %>
 				<div class="row">
 					<div class="col-xs-4">
+						<div><b><u>Basic Information:</u></b></div>
 						<div><span>First Name: </span><span><%= contact.first_name%></span></div>
 						<div><span>Last Name: </span><span><%= contact.last_name %></span></div>
 						<div><span>Address 1: </span><span><%= contact.address1%></span></div>
@@ -23,20 +25,28 @@
 						<div><span>Country: </span><span><%= contact.typ_country.country%></span></div>
 					</div>
 					<div class="col-xs-4">
-						
-						
+						<div><b><u>Telephone Numbers:</u></b></div>
+						<% contact.telephone_numbers.each do |t|%>
+							<span><%= t.telephone_type%>: </span><span><%= t.telephone_number%></span>
+						<% end %>
 					</div>
+
 					<div class="col-xs-4">
-						
-						
+						<div><b><u>Email Addresses:</u></b></div>
+						<% contact.email_addresses.each do |t|%>
+							<span><%= t.email_type%>: </span><span><%= t.email_address%></span>
+						<% end %>
 					</div>
 				</div>
 				<div class="moreDetails">
+					<button class="btn btn-default"><%= link_to( "Add Another Email" ,root_path)%></button>
+					<button class="btn btn-default"><%= link_to( "Add Another Telephone Number" ,root_path)%></button>
 					<button class="btn btn-default" type="submit"><%= link_to( "More details",contact_path(contact))%></button>
 				</div>
 				<hr>
 			<% end %>
 		</div>
+	<!-- It was empty display a message saying "There are not contacts" -->
 	<% else %>
 		<h2>There are no contacts</h2>
 	<% end %>

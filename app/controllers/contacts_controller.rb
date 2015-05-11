@@ -4,12 +4,6 @@ class ContactsController < ApplicationController
 		@contacts = Contact.paginate(page: params[:page])
 	end
 
-	def show
-		@contact = Contact.find(params[:id])
-		@telephone = TelephoneNumber.where(contact_id: params[:id])
-		@email = EmailAddress.where(contact_id: params[:id])
-	end
-
 	def new
 		@contact = Contact.new
 		@contact.email_addresses.build 

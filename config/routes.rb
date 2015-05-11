@@ -35,6 +35,8 @@ Rails.application.routes.draw do
   
   resources :contacts
   
+
+  
   root "contacts#index"
 
   # Example resource route with sub-resources:
