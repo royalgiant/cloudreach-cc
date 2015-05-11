@@ -5,19 +5,36 @@
 	</div>
 	<% if !@contacts.empty? %>
 		<h2>List of all Contacts</h2>
+		<hr>
 		<div>
 			<%= will_paginate @contacts, renderer: BootstrapPagination::Rails%>
 			<% @contacts.each do |contact| %>
-				<div>
-					<p>First Name: </p><span><%= %></span>
-					<p>Last Name: </p><span><%= %></span>
-					<p>Address 1: </p><span><%= %></span>
-					<p>Address 2: </p><span><%= %></span>
-					<p>City: </p><span><%= %></span>
-					<p>Postal Code: </p><span><%= %></span>
-					<p>Region: </p><span><%= %></span>
-					<p>Country: </p><span><%= %></span>
+				<div class="row">
+					<div class="col-xs-4">
+						<div><span>First Name: </span><span><%= contact.first_name%></span></div>
+						<div><span>Last Name: </span><span><%= contact.last_name %></span></div>
+						<div><span>Address 1: </span><span><%= contact.address1%></span></div>
+						<% if !contact.address2.blank? %>
+							<div><span>Address 2: </span><span><%= contact.address2%></span></div>
+						<% end %>
+						<div><span>City: </span><span><%= contact.city%></span></div>
+						<div><span>Postal Code: </span><span><%= contact.postal_code%></span></div>
+						<div><span>Region: </span><span><%= contact.typ_region.name%></span></div>
+						<div><span>Country: </span><span><%= contact.typ_country.country%></span></div>
+					</div>
+					<div class="col-xs-4">
+						
+						
+					</div>
+					<div class="col-xs-4">
+						
+						
+					</div>
 				</div>
+				<div class="moreDetails">
+					<button class="btn btn-default" type="submit"><%= link_to( "More details",contact_path(contact))%></button>
+				</div>
+				<hr>
 			<% end %>
 		</div>
 	<% else %>

@@ -5,6 +5,9 @@ class ContactsController < ApplicationController
 	end
 
 	def show
+		@contact = Contact.find(params[:id])
+		@telephone = TelephoneNumber.where(contact_id: params[:id])
+		@email = EmailAddress.where(contact_id: params[:id])
 	end
 
 	def new
